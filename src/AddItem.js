@@ -27,12 +27,15 @@ class AddItemForm extends React.Component {
 
     handleAddItem = event => {
 
+        // destructure 
+        const { addItem } = this.props;
+
         // to prevent browser reload/refresh when submitting
         event.preventDefault();
 
         // pass the item back to the parent component
         // so that it can actually be added to the items
-        this.props.addItem(this.state.value);
+        addItem(this.state.value);
 
         // now clear field for next input
         this.clearInput();
@@ -40,6 +43,7 @@ class AddItemForm extends React.Component {
 
 
     render() {
+
         return (
             <form onSubmit={this.handleAddItem}>
                 <input
