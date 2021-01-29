@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import AddItem from './AddItem';
 import DeleteItem from './DeleteItem';
-import DisplayItems from './DisplayItems';
+import ShoppingItems from './DisplayItems';
 
 
 
@@ -47,7 +47,7 @@ class ShoppingList extends Component {
                     noItemsFound={this.noItemsFound}
                 />
 
-                <DisplayItems
+                <ShoppingItems
                     items={this.state.items}
                 />
             </React.Fragment>
