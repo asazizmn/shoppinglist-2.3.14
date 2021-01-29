@@ -8,33 +8,31 @@ import ShoppingList from './ShoppingList';
 
 
 class App extends React.Component {
+  
   state = {
-    value: '',
-    items: [],
+    items: []
   };
 
-  handleChange = event => {
-    this.setState({ value: event.target.value });
-  };
 
-  addItem = event => {
-    event.preventDefault();
+  addItem = item => {
     this.setState(oldState => ({
-      items: [...oldState.items, this.state.value],
+
+      // utilising the spread operator to ensure old items are preserved
+      // ... and not overwritten
+      items: [...oldState.items, item]
     }));
   };
+
 
   deleteLastItem = event => {
     this.setState(prevState => ({ items: this.state.items.slice(0, -1) }));
   };
 
-  inputIsEmpty = () => {
-    return this.state.value === '';
-  };
 
   noItemsFound = () => {
     return this.state.items.length === 0;
   };
+
 
   render() {
     return (
@@ -45,12 +43,11 @@ class App extends React.Component {
           title={'ReactND - Coding Practice'}
         />
 
-        {/* ShoppingList */}
         <ShoppingList
           addItem={this.addItem}
-          value={this.state.value}
-          handleChange={this.handleChange}
-          inputIsEmpty={this.inputIsEmpty}
+          // value={this.state.value}
+          // handleChange={this.handleChange}
+          // inputIsEmpty={this.inputIsEmpty}
           deleteLastItem={this.deleteLastItem}
           noItemsFound={this.noItemsFound}
           items={this.state.items}

@@ -12,9 +12,9 @@ const ShoppingList = props => (
 
         <AddItem
             addItem={props.addItem}
-            value={props.value}
-            handleChange={props.handleChange}
-            inputIsEmpty={props.inputIsEmpty}
+            // value={props.value}
+            // handleChange={props.handleChange}
+            // inputIsEmpty={props.inputIsEmpty}
         />
 
         <DeleteItem
