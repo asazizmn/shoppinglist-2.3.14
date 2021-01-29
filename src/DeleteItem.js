@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 
 const DeleteItem = props => (
@@ -7,6 +7,13 @@ const DeleteItem = props => (
         Delete Last Item
     </button>
 );
+
+
+
+DeleteItem.propTypes = {
+    deleteLastItem: PropTypes.func.required,
+    noItemsFound: PropTypes.func.required
+};
 
 
 
