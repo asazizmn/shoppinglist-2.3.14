@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import AddItem from './AddItem';
 import DeleteItem from './DeleteItem';
-import ShoppingItems from './DisplayItems';
+import ShoppingItems from './ShoppingItems';
 
 
 
