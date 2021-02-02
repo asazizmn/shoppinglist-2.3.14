@@ -1,6 +1,9 @@
 import React from 'react';
-import Item from './Item';
 import PropTypes from 'prop-types';
+
+import Item from './Item';
+
+
 
 /*
 This presentational component can just be a Stateless Functional Component.

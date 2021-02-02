@@ -12,9 +12,12 @@ const ShoppingItems = props => (
             {
                 props.items.map((item, index) => (
                     <ShoppingItem
-                        index={index}
+                        key={index}
                         item={item}
                     />
+
+                    // <li key={index}>{item}</li>
+
                 ))
             }
         </ol>
