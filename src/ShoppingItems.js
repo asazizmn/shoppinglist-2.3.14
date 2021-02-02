@@ -12,6 +12,8 @@ const ShoppingItems = props => (
             {
                 props.items.map((item, index) => (
                     <ShoppingItem
+
+                        // pls note that this IS where `key` should be specified
                         key={index}
                         item={item}
                     />
