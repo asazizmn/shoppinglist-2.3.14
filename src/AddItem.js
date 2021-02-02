@@ -63,7 +63,7 @@ class AddItemForm extends React.Component {
 // please note that a static value is accessible directly through the class
 // `propTypes` in this case is being defined as a static field
 AddItemForm.propTypes = {
-    addItem: PropTypes.func.required
+    addItem: PropTypes.func.isRequired
 };
 
 

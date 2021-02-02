@@ -11,8 +11,8 @@ const DeleteItem = props => (
 
 
 DeleteItem.propTypes = {
-    deleteLastItem: PropTypes.func.required,
-    noItemsFound: PropTypes.func.required
+    deleteLastItem: PropTypes.func.isRequired,
+    noItemsFound: PropTypes.func.isRequired
 };
 
 

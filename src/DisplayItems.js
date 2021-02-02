@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import ShoppingItem from './ShoppingItem';
 
 
@@ -18,6 +20,12 @@ const ShoppingItems = props => (
         </ol>
     </React.Fragment>
 );
+
+
+
+ShoppingItems.propTypes = {
+    items: PropTypes.array.isRequired
+};
 
 
 
