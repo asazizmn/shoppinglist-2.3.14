@@ -26,6 +26,7 @@ class ShoppingList extends Component {
     deleteLastItem = event => {
 
         // please note that 'negative' values count from the end of the array
+        // so in this case 'slice(0, -1)' means that select everything until, but not including, the last item
         this.setState(prevState => ({ items: this.state.items.slice(0, -1) }));
     };
 
