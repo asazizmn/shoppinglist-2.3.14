@@ -24,6 +24,8 @@ class ShoppingList extends Component {
 
 
     deleteLastItem = event => {
+
+        // please note that 'negative' values count from the end of the array
         this.setState(prevState => ({ items: this.state.items.slice(0, -1) }));
     };
 
